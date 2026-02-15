@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Karpilo Trucking Controls",
-    page_icon="logo.png",   # <-- your logo file
+    page_icon="logo.png",
     layout="wide"
 )
 
