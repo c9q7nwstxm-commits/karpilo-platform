@@ -25,14 +25,6 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 from sqlalchemy import create_engine
 
-DB_PATH = "karpilo.db"
-UPLOAD_DIR = "uploads"
-
-import os
-os.makedirs(UPLOAD_DIR, exist_ok=True)
-
-engine = create_engine(f"sqlite:///{DB_PATH}", future=True)
-st.set_page_config(layout="wide")
 
 # --- HIDE SIDEBAR COLLAPSE ARROW + STYLE ---
 st.markdown("""
