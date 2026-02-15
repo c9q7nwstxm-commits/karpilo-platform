@@ -20,6 +20,9 @@ UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 engine = create_engine(f"sqlite:///{DB_PATH}", future=True)
+
+
+
 # --- DATABASE CONFIG ---
 DB_PATH = "karpilo.db"
 UPLOAD_DIR = "uploads"
