@@ -1,4 +1,12 @@
 import streamlit as st
+import os
+import re
+import math
+import datetime as dt
+import pandas as pd
+from sqlalchemy import create_engine, text
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
 
 st.set_page_config(
     page_title="Karpilo Trucking Controls",
@@ -6,23 +14,12 @@ st.set_page_config(
     layout="wide"
 )
 
-# app.py — Karpilo Trucking Platform (single-file Streamlit app)
+# --- DATABASE CONFIG ---
+DB_PATH = "karpilo.db"
+UPLOAD_DIR = "uploads"
+os.makedirs(UPLOAD_DIR, exist_ok=True)
 
-import os
-import re
-import math
-import datetime as dt
-
-import pandas as pd
-import streamlit as st
-from sqlalchemy import create_engine, text
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
-
-# ----------------------------
-# CONFIG
-# ----------------------------
-
+engine = create_engine(f"sqlite:///{DB_PATH}", future=True)
 # --- DATABASE CONFIG ---
 DB_PATH = "karpilo.db"
 UPLOAD_DIR = "uploads"
