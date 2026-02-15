@@ -1,3 +1,11 @@
+import streamlit as st
+
+st.set_page_config(
+    page_title="Karpilo Trucking Controls",
+    page_icon="logo.png",   # <-- your logo file
+    layout="wide"
+)
+x
 # app.py — Karpilo Trucking Platform (single-file Streamlit app)
 
 import os
@@ -23,6 +31,13 @@ import os
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 from sqlalchemy import create_engine
+
+DB_PATH = "karpilo.db"
+UPLOAD_DIR = "uploads"
+
+import os
+os.makedirs(UPLOAD_DIR, exist_ok=True)
+
 engine = create_engine(f"sqlite:///{DB_PATH}", future=True)
 st.set_page_config(layout="wide")
 
