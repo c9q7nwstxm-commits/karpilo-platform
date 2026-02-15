@@ -5,7 +5,7 @@ st.set_page_config(
     page_icon="logo.png",   # <-- your logo file
     layout="wide"
 )
-x
+
 # app.py — Karpilo Trucking Platform (single-file Streamlit app)
 
 import os
@@ -22,7 +22,7 @@ from reportlab.pdfgen import canvas
 # ----------------------------
 # CONFIG
 # ----------------------------
-st.set_page_config(layout="wide", page_title="Karpilo Trucking Platform")
+
 # --- DATABASE CONFIG ---
 DB_PATH = "karpilo.db"
 UPLOAD_DIR = "uploads"
